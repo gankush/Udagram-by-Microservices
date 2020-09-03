@@ -3,16 +3,17 @@ services:
   reverseproxy:
     build:
       context: .
-    image: jchaplin2/udagram-reverse-proxy:latest
+    image: gankush1995/udagram-reverse-proxy:latest
   backend_user:
     build:
-      context: ../../user-api
-    image: jchaplin2/udagram-user-api:latest
+      context: ../../udagram-restapi-user
+    image: gankush1995:udagram-userlatest
   backend_feed:
     build:
-      context: ../../feed-api
-    image: jchaplin2/udagram-feed-api:latest
+      context: ../../udagram-restapi-feed
+    image: gankush1995/udagram-feed:latest
   frontend:
     build:
-      context: ../../ui
-    image: jchaplin2/udagram-ui:latest
+      context: ../../udagram-frontend
+    image: gankush1995/udagram-frontend:latest
+sudo

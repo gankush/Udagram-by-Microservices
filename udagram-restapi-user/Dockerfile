@@ -6,15 +6,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-# ENV POSTGRES_USERNAME=udagramgoyaldev
-# ENV POSTGRES_PASSWORD=udagramgoyaldev
-# ENV POSTGRES_HOST=udagramgoyaldev.cpko0pkznkht.us-east-2.rds.amazonaws.com
-# ENV POSTGRES_DB=postgres
-# ENV AWS_BUCKET=udagram-goyal-dev
-# ENV AWS_REGION=us-east-2
-# ENV AWS_PROFILE=default
-# ENV JWT_SECRET=hello
-# ENV URL=http://localhost:8100
+
 
 
 RUN npm ci 
