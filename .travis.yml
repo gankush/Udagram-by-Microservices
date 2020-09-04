@@ -25,7 +25,7 @@ script:
     - docker tag udagram-restapi-feed gankush1995/udagram-feed:latest
   
     - docker build -t udagram-frontend udagram-frontend
-    - docker tag udagram-frontend jchaplin2/udagram-frontend:latest
+    - docker tag udagram-frontend gankush1995/udagram-frontend:latest
   
     - docker build -t udagram-restapi-user udagram-restapi-user
     - docker tag udagram-restapi-user gankush1995/udagram-user:latest
