@@ -34,7 +34,7 @@ script:
     - docker tag udagram-reverse-proxy gankush1995/udagram-reverse-proxy:latest
   
  
-    - docker push jchaplin2/udagram-feed
-    - docker push jchaplin2/udagram-frontend
-    - docker push jchaplin2/udagram-user
-    - docker push jchaplin2/udagram-reverse-proxy
+    - docker push gankush1995/udagram-feed
+    - docker push gankush1995/udagram-frontend
+    - docker push gankush1995/udagram-user
+    - docker push gankush1995/udagram-reverse-proxy
