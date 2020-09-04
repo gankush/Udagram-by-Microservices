@@ -38,3 +38,7 @@ services:
     image: gankush1995/udagram-frontend:latest
     ports:
       - "8100:80"
+
+
+
+      

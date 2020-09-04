@@ -7,7 +7,7 @@ services:
   backend_user:
     build:
       context: ../../udagram-restapi-user
-    image: gankush1995:udagram-userlatest
+    image: gankush1995:udagram-user:latest
   backend_feed:
     build:
       context: ../../udagram-restapi-feed
@@ -16,4 +16,3 @@ services:
     build:
       context: ../../udagram-frontend
     image: gankush1995/udagram-frontend:latest
-sudo
