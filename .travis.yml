@@ -17,11 +17,24 @@ before_install:
   - echo 'dockerhub credentials configured'
 install:
   - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel 
-  - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
+  # - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
 script:
-  - aws eks --region us-east-2 update-kubeconfig --name Ankush_udagram
-  - kubectl get pods
-  # - kubectl set image deployments/backend-feed backend-feed=juadel/udagram-feed-v2:latest
-  # - kubectl set image deployments/backend-user backend-user=juadel/udagram-user-v2:latest
-  # - kubectl set image deployments/frontend frontend=juadel/udagram-frontend-v2:latest
-  # - kubectl set image deployments/reverseproxy reverseproxy=juadel/reverseproxy-v2:latest
+    - docker --version # print the version for logging
+  
+    - docker build -t udagram-restapi-feed udagram-restapi-feed 
+    - docker tag udagram-restapi-feed gankush1995/udagram-feed:latest
+  
+    - docker build -t udagram-frontend udagram-frontend
+    - docker tag udagram-frontend jchaplin2/udagram-frontend:latest
+  
+    - docker build -t udagram-restapi-user udagram-restapi-user
+    - docker tag udagram-restapi-user gankush1995/udagram-user:latest
+    
+    - docker build -t udagram-reverse-proxy udacity-deployment/docker
+    - docker tag udagram-reverse-proxy gankush1995/udagram-reverse-proxy:latest
+  
+ 
+    - docker push jchaplin2/udagram-feed
+    - docker push jchaplin2/udagram-frontend
+    - docker push jchaplin2/udagram-user
+    - docker push jchaplin2/udagram-reverse-proxy
