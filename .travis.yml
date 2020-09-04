@@ -20,7 +20,7 @@ install:
   - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
 script:
   - kubectl get pods
-  - kubectl set image deployments/backend-feed backend-feed=juadel/udagram-feed-v2:latest
-  - kubectl set image deployments/backend-user backend-user=juadel/udagram-user-v2:latest
-  - kubectl set image deployments/frontend frontend=juadel/udagram-frontend-v2:latest
-  - kubectl set image deployments/reverseproxy reverseproxy=juadel/reverseproxy-v2:latest
+  # - kubectl set image deployments/backend-feed backend-feed=juadel/udagram-feed-v2:latest
+  # - kubectl set image deployments/backend-user backend-user=juadel/udagram-user-v2:latest
+  # - kubectl set image deployments/frontend frontend=juadel/udagram-frontend-v2:latest
+  # - kubectl set image deployments/reverseproxy reverseproxy=juadel/reverseproxy-v2:latest
