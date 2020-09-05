@@ -17,7 +17,7 @@ before_install:
   - echo 'dockerhub credentials configured'
 install:
   - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel 
-  # - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
+  # docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
 script:
     - docker --version # print the version for logging
   
